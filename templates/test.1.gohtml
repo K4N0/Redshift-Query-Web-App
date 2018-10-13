@@ -1,0 +1,270 @@
+           {{template "header"}}
+	<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Profile popup</title>
+  <meta name="viewport" content="width=device-width">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font: 300 1em/1.5 "Open Sans Condensed", sans-serif;
+  color: #333;
+}
+
+.button {
+  display: inline-block;
+  padding-left: 2em;
+  background-color: deepskyblue;
+  color: #f2f2f2;
+  margin: 2em;
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+}
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 3.05em;
+  height: 0;
+  width: 0;
+  border-top: 0.75em solid transparent;
+  border-bottom: 0.75em solid transparent;
+  border-left: 0.5em solid deepskyblue;
+}
+.button:after {
+  content: "";
+  width: 3.5em;
+  height: 3.5em;
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  
+  background-size: cover;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  display: none;
+}
+
+.popup__inner {
+  overflow-y: scroll;
+  max-height: 50%;
+  background-color: #f2f2f2;
+  width: 90%;
+  max-width: 55em;
+  margin: 20em auto 0;
+  padding: 25px;
+  border-radius: 2px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.6);
+}
+
+.popup__header {
+  background-color: lightgray;
+  padding: 0.25em 0.75em;
+  margin-bottom: 2em;
+  text-align: right;
+}
+
+.popup__close {
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  background-color: tomato;
+  border-radius: 50%;
+}
+.popup__close:hover {
+  background-color: #ff401e;
+}
+
+kbd {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 0.875em;
+  vertical-align: 0.125em;
+  margin-right: 0.5em;
+  color: slategray;
+}
+
+.profile__image {
+  width: 8em;
+  margin: 0 auto 2em;
+  border: 0.125em solid black;
+  background-color: #000;
+  display: block;
+}
+@media screen and (min-width: 30em) {
+  .profile__image {
+    display: inline-block;
+    margin: 0 3em 0 2em;
+  }
+}
+
+.profile__details {
+  margin: 0 2em 0 0;
+  text-align: center;
+}
+@media screen and (min-width: 30em) {
+  .profile__details {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+}
+
+
+.profile__name {
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+ 
+				<div class="container">
+	            <h2 class="main-title">Meet The Team</h2>
+	            <div class="gap"></div>
+	                <h3 class="main-title">STRATEGIC INVESTIGATIVE SOLUTIONS LEADER</h3>
+                <div class="gap"></div>
+				</div>
+				
+				<div class="container">
+	            <div  class="row">
+                <div class="col-md-3 col-xs-6">	               
+	                    <div class="center team-member">
+                            <div class="team-image"><img class="bounce-in" src="public/images/team/omalleyw.jpg" alt=""></div>
+							<div class="team-content">
+	                            <h5>William, O'Malley, CFE<br /><small>Manager – Strategic Investigative Solutions</small></h5>
+								<a href="mailto:omalleyw@amazon.com?Subject=ASIST Web&Body=Email sent from ASIST Website"target="_blank"><img class="btn " src="public/images/mailicon.jpg" alt=""></a>
+								<a href="https://phonetool.amazon.com/users/omalleyw"target="_blank"><img class="btn " src="public/images/phoneicon.jpg" alt=""></a>
+								<a href="https://tiny.amazon.com/175wadm2r"target="_blank"><img class="btn" src="public/images/simicon.png" alt=""></a> 
+								<a id="open-popup" href=""><img class="btn" src="public/images/profileicon.jpg"></a> 
+	                        </div>	
+	                    </div>
+	                </div>
+                </div>
+
+					<div class="gap"></div>
+	                <h2 class="main-title">Logistics Investigations</h2>
+                    <div class="gap"></div>
+
+	            <div  class="row">
+                <div class="col-md-3 col-xs-6">	               
+	                    <div class="center team-member">
+                            <div class="team-image"><img class="bounce-in" src="public/images/team/omalleyw.jpg" alt=""></div>
+							<div class="team-content">
+	                            <h5>William, O'Malley, CFE<br /><small>Manager – Strategic Investigative Solutions</small></h5>
+								<a href="mailto:omalleyw@amazon.com?Subject=ASIST Web&Body=Email sent from ASIST Website"target="_blank"><img class="btn " src="public/images/mailicon.jpg" alt=""></a>
+								<a href="https://phonetool.amazon.com/users/omalleyw"target="_blank"><img class="btn " src="public/images/phoneicon.jpg" alt=""></a>
+								<a href="https://tiny.amazon.com/175wadm2r"target="_blank"><img class="btn" src="public/images/simicon.png" alt=""></a> 
+								<a id="open-popup" href=""><img class="btn" src="public/images/profileicon.jpg"></a> 
+	                        </div>	
+	                    </div>
+	                </div>
+                </div>
+
+                
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="popup" id="popup">
+  <div class="popup__inner">
+    <header class="popup__header">
+      <kbd>EXIT</kbd><a href="#" class="popup__close"></a>  
+    </header>
+    <img src="public/images/team/omalleyw.jpg" alt="William, O'Malley" width="120" height="110" class="profile__image" /><!--
+    
+    --><section class="profile__details">
+<br />
+<br />
+      <h2 class="profile__name">William, O'Malley</h2>
+<br />	            
+	            <div class="left gap fade-down section-heading">
+	                <h4 class="main-title"><u>Internal Investigations</u></h4>
+	                <h5>•	Individuals that are working in collusion with each other or with a 3rd parties (i.e. contractor, vendor or external subject)<br />
+						•	Suspected losses are believed to be greater than $5000<br />
+						•	Subjects are targeting multiple items of the same ASIN or like ASIN’s<br />
+						•	Individuals involved in the investigation have over 24 months of employment with the company<br />
+						•	Stolen merchandise is being fenced or resold<br />
+						•	The removal of merchandise is by means other than through standard egress channels<br />
+						•	Investigative intelligence is required<br />
+						•	Individuals are involved in sophisticated embedded fraud<br />
+						•	The individual holds an elevated or sensitive internal position<br /></h5>
+
+	            </div> 
+    </section>
+  </div><!-- /popup__inner -->
+</div><!-- /popup -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="public/js/index.js"></script>
+
+
+
+
+
+
+
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+{{template "footer"}}
